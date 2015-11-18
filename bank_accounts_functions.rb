@@ -65,14 +65,24 @@ def total_cash_in_bank()
   for total_cash in ACCOUNTS
     total +=  total_cash[:amount]
   end
+  return total 
 end      
 
-
-
-
-
-
+def last_account_owner()
+  last_account = ACCOUNTS.last
+  last_owner = last_account[:holder_name]
+  return last_owner
 end  
+
+def average_bank_account_value()
+  total_cash_in_bank()/number_of_bank_accounts() 
+ end   
+
+
+
+
+
+
 
 
 
