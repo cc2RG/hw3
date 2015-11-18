@@ -74,15 +74,34 @@ def last_account_owner()
   return last_owner
 end  
 
-def average_bank_account_value()
-  total_cash_in_bank()/number_of_bank_accounts() 
+ def average_bank_account_value()
+   (total_cash_in_bank()/number_of_bank_accounts()).to_f 
+  return 
  end   
 
+ def total_cash_in_business_account()
+   total_cash = 0
+   for ac_num in ACCOUNTS
+      total_cash += ac_num[:amount] if ac_num[:type] == "business"
+   end
+   return total_cash   
+ end 
 
+ #def holder_of_the_largest_bank_account()
+   # high_acc = array[index of hash with highest :amount]
+   # holder = high_acc[:holder_name]
+   # return holder
+ #end
 
-
-
-
+  # def holder_of_largest_personal_account()
+  #   highest = 0
+  #   personal_acc = ACCOUNTS.select {|type| type [:type] ==  "personal" }
+    
+  #   highest = personal_acc.
+  #   
+      
+  #   return highest
+  # end  
 
 
 
