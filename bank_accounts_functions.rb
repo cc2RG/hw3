@@ -52,11 +52,17 @@ def first_bank_account_holder()
 end
 
 def print_owner_names()
+  acc_no = 0
+  number = ACCOUNTS.length
+  until acc_no == number
+    puts ACCOUNTS[acc_no][:holder_name]
+      acc_no += 1
+    end   
+end
 
-    for ACCOUNTS.length
-    puts "#{ACCOUNTS[:holder_name]}"  
-    end  
-end  
+
+
+
 
 
 
