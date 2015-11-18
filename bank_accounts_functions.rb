@@ -55,11 +55,24 @@ def print_owner_names()
   acc_no = 0
   number = ACCOUNTS.length
   until acc_no == number
-    puts ACCOUNTS[acc_no][:holder_name]
+    print "#{ACCOUNTS[acc_no][:holder_name]}\n"  + " "
       acc_no += 1
     end   
 end
 
+def total_cash_in_bank()
+  total = 0
+  for total_cash in ACCOUNTS
+    total +=  total_cash[:amount]
+  end
+end      
+
+
+
+
+
+
+end  
 
 
 
